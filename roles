@@ -1,6 +1,6 @@
 client.on("voiceStateUpdate", (old, new1) => {
-    var channel = "أيدي الروم";
-    var role = "إسم الرتبة"
+    var channel = "https://discord.gg/HheusW";
+    var role = "❃〘TOP$〙❃"
     لول(old,new1,channel,role);
 });
 
