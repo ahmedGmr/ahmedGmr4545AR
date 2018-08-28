@@ -32,7 +32,7 @@ client.on('message', message => {
     if (message.guild) {
    let embed = new Discord.RichEmbed()
     let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc') {
+if(message.content.split(' ')[0] == prefix + $bc') {
     message.channel.send(`\`${message.guild.memberCount}\` : عدد الاعضاء المستلمين`); 
     if (!args[1]) {
 return;
