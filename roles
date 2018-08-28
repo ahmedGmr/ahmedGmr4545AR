@@ -1,0 +1,17 @@
+client.on("voiceStateUpdate", (old, new1) => {
+    var channel = "أيدي الروم";
+    var role = "إسم الرتبة"
+    لول(old,new1,channel,role);
+});
+
+function لول(o,n,channel,role){
+    if (!o.voiceChannel && n.voiceChannel) {
+        if (n.voiceChannelID == channel) {
+            n.addRole(n.guild.roles.find("name", role));
+        };
+    } else if (o.voiceChannel && !n.voiceChannel) {
+        if (o.voiceChannelID == channel) {
+            n.removeRole(n.guild.roles.find("name", role))
+        }
+    }
+}
