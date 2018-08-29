@@ -27,7 +27,6 @@ client.user.setGame(`TOP$BOT$`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
-
 client.on('message', message => {
     if (message.author.id === client.user.id) return;
     if (message.guild) {
@@ -41,16 +40,19 @@ return;
         message.guild.members.forEach(m => {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
         var bc = new Discord.RichEmbed()
-            .addField(':earth_americas:  » https://discord.gg/HheusW انضمو يا شباب : ', message.guild.name)
-            .addField(':thinking:  » ahmedGmr : ', message.author.username)
-            .addField(':pencil:  » دة البوت بتاعي  https://discordapp.com/api/oauth2/authorize?client_id=471531013193859072&permissions=0&redirect_uri=https%3A%2F%2Fdiscord.gg%2F5amSGB&scope=bot : ', args)
+            .addField(':earth_americas:  » سيرفر : ', message.guild.name)
+            .addField(':thinking:  » راسل : ', message.author.username)
+            .addField(':pencil:  » الرسالة : ', args)
             .setColor('#ff0000')
             // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
+ message.delete(); 
         });
     }
     } else {
         return;
     }
 });
+
+
 client.login(process.env.BOT_TOKEN);
