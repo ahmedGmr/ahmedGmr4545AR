@@ -43,7 +43,7 @@ return;
         var bc = new Discord.RichEmbed()
             .addField(':earth_americas:  » https://discord.gg/HheusW انضمو يا شباب : ', message.guild.name)
             .addField(':thinking:  » ahmedGmr : ', message.author.username)
-            .addField(':pencil:  » https://discordapp.com/api/oauth2/authorize?client_id=471531013193859072&permissions=0&redirect_uri=https%3A%2F%2Fdiscord.gg%2F5amSGB&scope=bot : ', args)
+            .addField(':pencil:  » https://discordapp.com/api/oauth2/authorize?client_id=471531013193859072&permissions=0&redirect_uri=https%3A%2F%2Fdiscord.gg%2F5amSGB&scope=bot : ', args) دة البوت بتاعي ياريت تضموة في سرفركوم
             .setColor('#ff0000')
             // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
