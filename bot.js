@@ -53,6 +53,49 @@ return;
         return;
     }
 });
+client.on('message', message => {
+   if(message.content.startsWith(prefix + $help')) {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(${message.author.username}, message.author.avatarURL)
+        .setTitle(**تم إرسال الأوامر العامة في الخاص**)
+     message.channel.sendEmbed(embed);
+       }
+
+   });
+
+
+
+client.on("message", message => {
+ if (message.content === "=help") {
+  const embed = new Discord.RichEmbed() 
+      .setColor("#05ff00")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(***═════════ஜ۩  أوامر الاعضاء  ۩ஜ═══════════***
+**『=support/لإخذ رابط السببورت』**
+**『=avatar/لإضهار صورتك』**
+**『=s-avatar/لعرض صورة السيرفر』**
+**『=count/لمعرفة عدد الأعضاء』**
+**『=contact/لإرسال رسالة لصاحب البوت』**
+**『=rooms/لمعرففة عدد الرومات』**
+**『=roles/لمعرفة الرتب』**
+**『=info/لإرسال معلومات البوت』**
+**『=bans/لمعرفة عدد المتبندين』**
+**『=id/لإرسال ايديك』**
+**『=ui/لمعرفة منشن شخص عن طريد الايدي』**
+**『=report/للتبليغ على شخص』**
+**『=suggest/لإرسال اقتراح』**
+**『=servers/لإضهار السيرفرات الي ضايفين البوت』**
+**『=invites/للمعرفة عدد الأشخاص الي جبتهم للسيرفر』**
+**『=invite/لإخذ رابط البوت』**
+***═════════ஜ۩  أوامر الاعضاء  ۩ஜ═══════════***)
+
+
+message.author.sendEmbed(embed)
+
+}
+});
+لا تنسة تغير PreFix
 
 
 client.login(process.env.BOT_TOKEN);
