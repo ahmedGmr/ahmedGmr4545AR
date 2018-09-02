@@ -54,7 +54,7 @@ return;
     }
 });
 client.on('message', message => {
-   if(message.content.startsWith(prefix + $help')) {
+   if(message.content.startsWith(prefix + `help')) {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setAuthor(${message.author.username}, message.author.avatarURL)
