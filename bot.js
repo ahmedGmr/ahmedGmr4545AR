@@ -27,12 +27,6 @@ client.user.setGame(`Top$Bot$`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
-client.on("voiceStateUpdate", (old, new1) => {
-    var channel = "https://discord.gg/H8jG7zN";
-    var role = "TOP$"
-    لول(old,new1,channel,role);
-});
-
 function لول(o,n,channel,role){
     if (!o.voiceChannel && n.voiceChannel) {
         if (n.voiceChannelID == channel) {
