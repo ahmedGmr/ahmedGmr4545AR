@@ -27,6 +27,25 @@ client.user.setGame(`Top$Bot$`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
+var Discord = require('discord.io');
+var drole = '';  Top$ /
+var serverid = ''; / https://discord.gg/zvwpSCN /
+var bot = new Discord.Client({
+  autorun: true, / If false, you need to connect to the server using bot.connect(); /
+  token: '' / توكن الديسكورد /
+});
+
+bot.on('ready', function() {
+  console.log('Successfully connected: ' + bot.username + ' - (' + bot.id + ')');
+});
+
+bot.on('guildMemberAdd', function(callback) { / Event called when someone joins the server /
+  if(callback.guild_id == serverid)
+    bot.addToRole({'serverID':serverid,'userID':callback.id,'roleID':drole},function(err,response) {
+      if (err) console.error(err); / Failed to apply role /
+        / some code 
+  });
+ });
 function لول(o,n,channel,role){
     if (!o.voiceChannel && n.voiceChannel) {
         if (n.voiceChannelID == channel) {
