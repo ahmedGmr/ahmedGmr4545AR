@@ -29,7 +29,7 @@ client.user.setGame(`Top$Bot$`,"http://twitch.tv/S-F")
 });
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help") {
+     if (message.content === prefix + $help") {
          message.channel.send('The Message Was Sent On Private');
 
 
