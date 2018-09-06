@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = $help
+const prefix = '.'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Top$Bot$`,"http://twitch.tv/S-F")
+client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -122,36 +122,6 @@ bot invite link : https://discordapp.com/api/oauth2/authorize?client_id=48235713
 
     }
 }); 
-var Discord = require('discord.io');
-var drole = '';  Top$ /
-var serverid = ''; / https://discord.gg/zvwpSCN /
-var bot = new Discord.Client({
-  autorun: true, / If false, you need to connect to the server using bot.connect(); /
-  token: '' / توكن الديسكورد /
-});
-
-bot.on('ready', function() {
-  console.log('Successfully connected: ' + bot.username + ' - (' + bot.id + ')');
-});
-
-bot.on('guildMemberAdd', function(callback) { / Event called when someone joins the server /
-  if(callback.guild_id == serverid)
-    bot.addToRole({'serverID':serverid,'userID':callback.id,'roleID':drole},function(err,response) {
-      if (err) console.error(err); / Failed to apply role /
-        / some code 
-  });
- });
-function لول(o,n,channel,role){
-    if (!o.voiceChannel && n.voiceChannel) {
-        if (n.voiceChannelID == channel) {
-            n.addRole(n.guild.roles.find("name", role));
-        };
-    } else if (o.voiceChannel && !n.voiceChannel) {
-        if (o.voiceChannelID == channel) {
-            n.removeRole(n.guild.roles.find("name", role))
-        }
-    }
-}
 client.on('message', message => {
     if (message.author.id === client.user.id) return;
     if (message.guild) {
