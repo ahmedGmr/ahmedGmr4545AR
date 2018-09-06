@@ -27,47 +27,16 @@ client.user.setGame(`Top$Bot$`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
-var Discord = require('discord.io');
-var drole = '';  Top$ /
-var serverid = ''; / https://discord.gg/zvwpSCN /
-var bot = new Discord.Client({
-  autorun: true, / If false, you need to connect to the server using bot.connect(); /
-  token: '' / توكن الديسكورد /
-});
-
-bot.on('ready', function() {
-  console.log('Successfully connected: ' + bot.username + ' - (' + bot.id + ')');
-});
-
-bot.on('guildMemberAdd', function(callback) { / Event called when someone joins the server /
-  if(callback.guild_id == serverid)
-    bot.addToRole({'serverID':serverid,'userID':callback.id,'roleID':drole},function(err,response) {
-      if (err) console.error(err); / Failed to apply role /
-        / some code 
-  });
- });
-function لول(o,n,channel,role){
-    if (!o.voiceChannel && n.voiceChannel) {
-        if (n.voiceChannelID == channel) {
-            n.addRole(n.guild.roles.find("name", role));
-        };
-    } else if (o.voiceChannel && !n.voiceChannel) {
-        if (o.voiceChannelID == channel) {
-            n.removeRole(n.guild.roles.find("name", role))
-        }
-    }
-}
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help-en") {
-         message.channel.send('**The Message Was Sent On Private**');
-            
-    
-         
+     if (message.content === prefix + "help") {
+         message.channel.send('The Message Was Sent On Private');
 
 
- message.author.sendMessage(`
- **
+
+
+
+ message.author.sendMessage(**
 ╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╭╮
 ┃╭━━╯╱╱╱╱╱╱╱╱╱╱╱┃┃
 ┃╰━━┳╮╭┳━━┳╮╭┳━━┫┃╭━━╮
@@ -78,7 +47,7 @@ client.on('message', message => {
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╰╯
 
 ╔[❖════════════❖]╗
-             Prefix = $help
+             Prefix = ' * '
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
@@ -122,9 +91,9 @@ client.on('message', message => {
 
 ❖ *avatar ➾ your avatar account
 
-❖ $help-en ➾ $help by arabic
+❖ *help-en ➾ help by arabic
 
-❖ #help-en ➾ help by english
+❖ *help-en ➾ help by english
 
 ❖ *ping ➾ to see ping
 
@@ -143,19 +112,46 @@ to enable welcome message do channel name "wlc"
 
 ==================================================================
 
-Server support: https://discord.gg/zvwpSCN
+Server support : https://discord.gg/xbgbpkj
 
 ==================================================================
 
-bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=482357134923923456&permissions=0&scope=bot
+bot invite link : https://discordapp.com/api/oauth2/authorize?client_id=482357134923923456&permissions=0&scope=bot
 
-==================================================================
-
-`);
+==================================================================);
 
     }
+}); 
+var Discord = require('discord.io');
+var drole = '';  Top$ /
+var serverid = ''; / https://discord.gg/zvwpSCN /
+var bot = new Discord.Client({
+  autorun: true, / If false, you need to connect to the server using bot.connect(); /
+  token: '' / توكن الديسكورد /
 });
 
+bot.on('ready', function() {
+  console.log('Successfully connected: ' + bot.username + ' - (' + bot.id + ')');
+});
+
+bot.on('guildMemberAdd', function(callback) { / Event called when someone joins the server /
+  if(callback.guild_id == serverid)
+    bot.addToRole({'serverID':serverid,'userID':callback.id,'roleID':drole},function(err,response) {
+      if (err) console.error(err); / Failed to apply role /
+        / some code 
+  });
+ });
+function لول(o,n,channel,role){
+    if (!o.voiceChannel && n.voiceChannel) {
+        if (n.voiceChannelID == channel) {
+            n.addRole(n.guild.roles.find("name", role));
+        };
+    } else if (o.voiceChannel && !n.voiceChannel) {
+        if (o.voiceChannelID == channel) {
+            n.removeRole(n.guild.roles.find("name", role))
+        }
+    }
+}
 client.on('message', message => {
     if (message.author.id === client.user.id) return;
     if (message.guild) {
