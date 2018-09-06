@@ -48,7 +48,7 @@ client.on('message', message => {
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╰╯
 
 ╔[❖════════════❖]╗
-             Prefix = ' * '
+             Prefix = $help
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
@@ -92,9 +92,9 @@ client.on('message', message => {
 
 ❖ *avatar ➾ your avatar account
 
-❖ *help-en ➾ help by arabic
+❖ $help-en ➾ $help by arabic
 
-❖ *help-en ➾ help by english
+❖ #help-en ➾ help by english
 
 ❖ *ping ➾ to see ping
 
@@ -113,11 +113,11 @@ to enable welcome message do channel name "wlc"
 
 ==================================================================
 
-Server support: رابط سيرفرك
+Server support: https://discord.gg/zvwpSCN
 
 ==================================================================
 
-bot invite link: رابط بوت مالتك
+bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=482357134923923456&permissions=0&scope=bot
 
 ==================================================================
 
