@@ -142,7 +142,7 @@ Server support : https://discord.gg/xbgbpkj
 
 ==================================================================
 
-bot invite link : https://discordapp.com/api/oauth2/authorize?client_id=482357134923923456&permissions=0&scope=bot
+bot invite link : https:https://discordapp.com/api/oauth2/authorize?client_id=482357134923923456&permissions=0&scope=bot
 
 ==================================================================);
 
