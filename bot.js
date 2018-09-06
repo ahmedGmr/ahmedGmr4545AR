@@ -147,6 +147,6 @@ bot invite link : https://discordapp.com/api/oauth2/authorize?client_id=48235713
 ==================================================================);
 
     }
-}); 
+});
 
 client.login(process.env.BOT_TOKEN);
